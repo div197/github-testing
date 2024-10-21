@@ -912,14 +912,14 @@
 .fr-window-skin-fresco .fr-close-icon,
 .fr-window-skin-fresco .fr-thumbnails-side-button-icon,
 .fr-window-skin-fresco .fr-error-icon {
-  background-image: url('https://github.abcsteps.xyz/wp-content/themes/hub/assets/vendors/fresco/fresco-skins/sprite.svg');
+  background-image: url('../fresco-skins/sprite.svg');
 }
 /* fallback png sprite */
 .fr-window-skin-fresco.fr-no-svg .fr-side-button-icon,
 .fr-window-skin-fresco.fr-no-svg .fr-close-icon,
 .fr-window-skin-fresco.fr-no-svg .fr-thumbnails-side-button-icon,
 .fr-window-skin-fresco .fr-error-icon {
-  background-image: url('https://github.abcsteps.xyz/wp-content/themes/hub/assets/vendors/fresco/fresco-skins/sprite.png');
+  background-image: url('../fresco-skins/sprite.png');
 }
 
 .fr-window-skin-fresco .fr-error-icon { background-position: -160px -126px; }
