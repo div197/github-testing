@@ -1,0 +1,124 @@
+.hub-booking-form :is(input,textarea,select){
+    width: 100%;
+}
+
+.hub-booking-form :is(input,textarea)::placeholder{
+    opacity: 1;
+}
+
+.hub-booking-form select{
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-ChevronDown"><path d="M4 9l8 8 8-8"/></svg>') no-repeat;
+    background-position: calc(100% - 0.75rem) center !important;
+    -moz-appearance:none !important;
+    -webkit-appearance: none !important; 
+    appearance: none !important;
+    padding-right: 2rem !important;
+}
+
+.hub-booking-form .datepicker-input{
+    margin-bottom: 1em;
+}
+
+.hub-booking-form p.error{
+    border: 1px solid #ddd;
+    padding: 1em;
+    font-size: 14px;
+}
+
+.hub-booking-form:is(.form-init,.form-loading) :is(.before-submit){
+    display: none;
+}
+
+.hub-booking-form:is(.form-step-user.form-loading,.form-done) :is(#datepicker, label, .choose-date, .user-form, .form-field, button.submit){
+    display: none;
+}
+
+.hub-booking-form :is(.user-form,button.submit){
+    display: none;
+}
+
+.hub-booking-form:is(.form-step-user) :is(.user-form){
+    display: block;
+}
+
+.hub-booking-form:is(.form-step-user) :is(button.submit){
+    display: flex;
+}
+
+.hub-booking-form:is(.form-step-user) .before-submit{
+    display: none;
+}
+
+.hub-booking-form.form-init .datepicker-input{
+    margin: 0;
+}
+
+.hub-booking-form .user-form{
+    margin-bottom: 1em;
+}
+
+.hub-booking-form .hub-booking-alert .dashicons{
+    font-size: 2em;
+}
+
+.hub-booking-form #datepicker{
+    cursor: pointer;
+}
+
+/* Loader */
+.hub-booking-form.form-loading .loader-clock{
+    display: block;
+}
+
+.loader-clock {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    position: relative;
+    background-color: #FFF;
+    background: radial-gradient(ellipse at center, #FF3D00 0%, #FF3D00 14%, #FFF 15%, #FFF 100%);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    display: none;
+    margin: 1em auto 0 auto;
+}
+.loader-clock::after,
+.loader-clock::before {
+    content: '';  
+    position: absolute;
+    height: 16px;
+    width: 4px;
+    background: #FF3D00;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) rotate(0deg);
+    transform-origin: 25% 0;
+    box-sizing: border-box;
+    animation: rotation 10s linear infinite;
+}
+.loader-clock::before {
+    height: 22px;
+    width: 2px;
+    transform: translateX(-50%) rotate(0deg);
+    animation-duration: 1s;
+} 
+@keyframes rotation {
+    0%    { transform: rotate(0deg)}
+    100%  { transform: rotate(360deg)}
+} 
+
+.hub-booking-form .form-icon-wrapper{
+    width: 1em;
+    position: absolute;
+}
+
+.hub-booking-form .form-btn-icon{
+    width: 1em;
+    margin-right: 0.5em;
+}
+
+.air-datepicker-global-container{
+    z-index: 999999999;
+}
